@@ -2542,8 +2542,6 @@ static int prepend_path(const struct path *path,
 	if (!error && !slash)
 		error = prepend(buffer, buflen, "/", 1);
 
-out:
-	br_read_unlock(&vfsmount_lock);
 	return error;
 
 global_root:
